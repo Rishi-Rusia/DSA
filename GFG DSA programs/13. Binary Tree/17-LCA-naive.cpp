@@ -111,7 +111,7 @@ int main()
     root->right->left = new node(6);
     root->right->right = new node(7);
 
-    cout << LCA(root, 4, 5);
+    cout << LCA(root, 7, 6);
 }
 
 // I am not entirely sure about this solution, please check
