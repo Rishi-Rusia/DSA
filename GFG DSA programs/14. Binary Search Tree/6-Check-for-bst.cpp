@@ -134,7 +134,8 @@ int main()
     insertBST(root, 7);
     insertBST(root, 6);
 
-    root->left->right = new node(18);
+    // Uncommenting this tree with ruin the binary tree
+    //  root->left->right = new node(18);
 
     inorder(root);
     cout << endl;
