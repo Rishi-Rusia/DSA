@@ -6,45 +6,43 @@ using namespace std;
 bool Balanced(string s)
 {
     stack<char> st;
-    for(int i=0;i<s.length();i++)
+    for (int i = 0; i < s.length(); i++)
     {
-        if(s[i]=='{' || s[i]=='[' || s[i]=='(')
+        if (s[i] == '{' || s[i] == '[' || s[i] == '(')
         {
             st.push(s[i]);
-            cout<<s[i]<<endl;
+            cout << s[i] << endl;
         }
-        else if(s[i]=='}' || s[i]==']' || s[i]==')')
+        else if (s[i] == '}' || s[i] == ']' || s[i] == ')')
         {
-            cout<<s[i]<<endl;
-            if(s[i]=='}' && st.top()=='{')
+            cout << s[i] << endl;
+            if (s[i] == '}' && st.top() == '{')
             {
                 st.pop();
             }
-            else if(s[i]==']' && st.top()=='[')
+            else if (s[i] == ']' && st.top() == '[')
             {
                 st.pop();
             }
-            else if(s[i]==')' && st.top()=='(')
+            else if (s[i] == ')' && st.top() == '(')
             {
                 st.pop();
-                
             }
             else
             {
                 return false;
             }
-            
         }
         else
         {
             continue;
         }
     }
-    
+
     return true;
 }
 
 int main()
 {
-    cout<<Balanced("{[()]}");
+    cout << Balanced("{[()]}");
 }
